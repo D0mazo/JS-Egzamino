@@ -120,7 +120,7 @@ export default function ListingPage() {
                   {isUserLoggedIn && (
                     <>
                       <Link
-                        to={`/edit-listing/${listing.id}`}
+                        to={`/editlistingpage/${listing.id}`}
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                       >
                         Edit
