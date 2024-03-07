@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.2
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Feb 05, 2024 at 11:27 AM
--- Server version: 10.4.10-MariaDB
--- PHP Version: 7.1.33
+-- Host: 127.0.0.1
+-- Generation Time: Mar 07, 2024 at 08:19 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -25,24 +24,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `student`
+-- Table structure for table `skelbimas`
 --
 
-CREATE TABLE `student` (
+CREATE TABLE `skelbimas` (
   `id` int(11) NOT NULL,
-  `firstname` varchar(64) NOT NULL,
-  `lastname` varchar(64) NOT NULL,
-  `email` varchar(128) NOT NULL,
-  `created_at` datetime NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `student`
---
-
-INSERT INTO `student` (`id`, `firstname`, `lastname`, `email`, `created_at`) VALUES
-(1, 'Vaidotas', 'Poskus', 'vaidotas@bit.lt', '2024-01-24 11:37:21'),
-(2, 'Jonas', 'Jonaitis', 'jonas@bit.lt', '2024-01-31 11:28:36');
+  `title` varchar(255) NOT NULL,
+  `category` varchar(50) NOT NULL,
+  `discription` varchar(255) NOT NULL,
+  `price` int(11) NOT NULL,
+  `url` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -55,51 +47,49 @@ CREATE TABLE `user` (
   `email` varchar(128) NOT NULL,
   `password` varchar(255) NOT NULL,
   `scope` varchar(16) NOT NULL,
-  `verified` tinyint(1) NOT NULL DEFAULT 0,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `email`, `password`, `scope`, `verified`, `created_at`) VALUES
-(1, 'vaidotass@gmail.com', '$2b$10$ST9gDEfJP6pNZUE8ln2WsOXHQonz9YOH2e4h/O0TLwfS025IJ7Kz.', 'admin', 1, '2024-01-30 10:03:01'),
-(2, 'manager@bit.lt', '$2b$10$YJ6O3kKRvrh8lz/1SnryDebcI5vK0EtsGtWUVwqY65THK1vQZ9xFS', 'manager', 1, '2024-02-05 09:22:15'),
-(3, 'user@bit.lt', '$2b$10$C21IRo60jVkndYvUQ9HRMuYwQkvCumdLKQffve3MkSkuitY1G70HO', 'manager', 0, '2024-02-05 10:24:19');
+INSERT INTO `user` (`id`, `email`, `password`, `scope`, `created_at`) VALUES
+(3, 'Dominykas@pavargau.lt', '$2b$10$dt/9jv9EkgV4fyfo801tuO0XvWc2O/.gV1Fa4FaKS4zSSw/834m.i', 'admin', '2024-02-19 11:49:03'),
+(4, 'vaidotass@gmail.com', '$2b$05$mLHzcUi9TJ8RnpIjnXnNMe8iMe8dKN/DzN.qrZl47.62iud8fNMiG', 'manager', '2024-02-26 09:55:06'),
+(5, 'vaidotass@gmail.com', '$2b$05$eantxrXPGCC7gHCrO6IyhO4kRsczBtpwWlKMM4qYk5rNocOLyR9qW', 'manager', '2024-03-05 12:32:25');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `student`
+-- Indexes for table `skelbimas`
 --
-ALTER TABLE `student`
+ALTER TABLE `skelbimas`
   ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `student`
+-- AUTO_INCREMENT for table `skelbimas`
 --
-ALTER TABLE `student`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+ALTER TABLE `skelbimas`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
