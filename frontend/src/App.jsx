@@ -2,9 +2,11 @@ import './App.css'
 import {Toaster} from "react-hot-toast";
 import Header from "./components/layout/Header.jsx";
 import {Route, Routes} from "react-router-dom";
+
 import StudentListPage from "./pages/student/ListPage.jsx";
 import StudentCreatePage from "./pages/student/CreatePage.jsx";
 import StudentEditPage from "./pages/student/EditPage.jsx";
+
 import RegisterPage from "./pages/auth/RegisterPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import LoginPage from "./pages/auth/LoginPage.jsx";
