@@ -41,7 +41,7 @@ export default function ListingPage() {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-4xl">Listings</h1>
+      <h1 className="text-4xl">Skelbimai</h1>
 
       <div className="mt-5">
         <input
@@ -62,7 +62,7 @@ export default function ListingPage() {
               <th className="px-4 py-2">Category</th>
               <th className="px-4 py-2">Description</th>
               <th className="px-4 py-2">Price</th>
-              <th className="px-4 py-2">URL</th>
+              <th className="px-4 py-2">IMG</th>
               <th className="px-4 py-2"></th>
             </tr>
           </thead>
