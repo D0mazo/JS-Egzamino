@@ -14,39 +14,39 @@ export default function Header() {
     }
 
     return (
-        <div className='bg-stone-300'>
+        <div className='bg-blue-300'>
             <header className='container flex justify-end items-center'>
-                <NavLink className='px-4 py-3 hover:bg-stone-500 hover:text-white' to={'/'}>Pradinis puslapis</NavLink>
-                <NavLink className='px-4 py-3 hover:bg-stone-500 hover:text-white' to={'/list-student'}>
+                <NavLink className='px-4 py-3 hover:bg-blue-400 hover:text-gray-800' to={'/'}>Pradinis puslapis</NavLink>
+                <NavLink className='px-4 py-3 hover:bg-blue-400 hover:text-gray-800' to={'/list-student'}>
                     Skelbimai
                 </NavLink>
                 {!isUserLoggedIn && (
                     <>
-                        <NavLink className='px-4 py-3 hover:bg-stone-500 hover:text-white'
+                        <NavLink className='px-4 py-3 hover:bg-blue-400 hover:text-gray-800'
                                  to={'/login'}>Prisijungti</NavLink>
-                        <NavLink className='px-4 py-3 hover:bg-stone-500 hover:text-white'
+                        <NavLink className='px-4 py-3 hover:bg-blue-400 hover:text-gray-800'
                                  to={'/register'}>Registracija</NavLink>
                     </>
                 )}
 
                 {isUserLoggedIn && (
                     <>
-                        <NavLink className='px-4 py-3 hover:bg-stone-500 hover:text-white' to={'/create-student'}>
+                        <NavLink className='px-4 py-3 hover:bg-blue-400 hover:text-gray-800' to={'/create-student'}>
                             Sukurti Skelbimą
                         </NavLink>
                         {isUserAdmin && (
                             <>
-                                <NavLink className='px-4 py-3 hover:bg-stone-500 hover:text-white' to={'/create-user'}>
-                                    Sukurti vartotoja
+                                <NavLink className='px-4 py-3 hover:bg-blue-400 hover:text-gray-800' to={'/create-user'}>
+                                    Sukurti vartotoją
                                 </NavLink>
-                                <NavLink className='px-4 py-3 hover:bg-stone-500 hover:text-white' to={'/list-user'}>
+                                <NavLink className='px-4 py-3 hover:bg-blue-400 hover:text-gray-800' to={'/list-user'}>
                                     Vartotojai
                                 </NavLink>
                             </>
 
                         )}
                         <button
-                            className="px-4 py-3 hover:bg-stone-500 hover:text-white"
+                            className="px-4 py-3 hover:bg-blue-400 hover:text-gray-800"
                             onClick={handleLogout}
                         >
                             Atsijungti

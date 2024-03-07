@@ -31,7 +31,7 @@ function App() {
                     </PrivateRoute>
                 } />
 
-                <Route path='/edit-listing/:id' element={
+                <Route path='/edit-student/:id' element={
                     <PrivateRoute>
                         <StudentEditPage />
                     </PrivateRoute>

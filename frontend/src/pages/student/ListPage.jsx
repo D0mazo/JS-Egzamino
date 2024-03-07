@@ -48,12 +48,12 @@ export default function ListingPage() {
   const searchpage = (event) => {
     event.preventDefault();
     
-    // Filter announcements based on selected category
+   
     const filteredByCategory = listingData.filter((listing) => {
       return selectedCategory === '' || listing.category.toLowerCase() === selectedCategory.toLowerCase();
     });
 
-    // Update the displayed listings with the filtered ones
+   
     setListingData(filteredByCategory);
   };
 
@@ -128,7 +128,7 @@ export default function ListingPage() {
                   {isUserAdmin && (
                     <>
                       <Link
-                        to={`edit-listing/${listing.id}`}
+                        to={`/${listing.id}`}
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                       >
                         Edit

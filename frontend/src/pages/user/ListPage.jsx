@@ -39,7 +39,7 @@ export default function UserListPage() {
 
     return (
         <div className='container mx-auto p-4'>
-            <h1 className='text-4xl'>Vartotojų sarasas</h1>
+            <h1 className='text-4xl'>Vartotojų sarašas</h1>
 
             <div className="mt-5">
                 <input
