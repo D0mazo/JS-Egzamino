@@ -56,7 +56,7 @@ module.exports = {
   update: async (req, res, next) => {
     const { id } = req.params;
 
-    const { title, category, description, price, url } = req.body;
+    const { title, category, discription, price, url } = req.body;
 
     const sql =
       'UPDATE skelbimas SET title=?, category=?, discription=?, price=?, url=? WHERE id=?';
