@@ -10,29 +10,34 @@ GET http://localhost:3000/test-connection
 GET http://localhost:3000/api/skelbimai
 
 
-### Get single student
-GET http://localhost:3000/api/skelbimai/5
+### Get single skelbimai
+GET http://localhost:3000/api/skelbimai/1
 
 
-### POST create student
+### POST create skelbimai
 POST http://localhost:3000/api/skelbimai/
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXIiOnsiaWQiOjMsImVtYWlsIjoidmFpZG90YXNzQGdtYWlsLmNvbSIsInNjb3BlIjoiYWRtaW4ifSwiaWF0IjoxNzA2Njk0Nzk1LCJleHAiOjE3MDY2OTgzOTV9.BD2kjX7565ZsPEIclVXOPe0PxuVFhzFjIq0dJSJf21c
 
 {
-  "firstname": "Moe",
-  "lastname": "Deo",
-  "email": "moe@bit.lt"
+  "title": "Raudona",
+  "category": "Mašinos",
+  "discription": "Nedaužta",
+  "price": 150,
+  "url": "https://www.e-vaikas.lt/70094-home_default/elektromobilis-bmw-m5-lakuotas-raudonas-masinos.jpg"
 }
 
-### Update single student
+### Update single skelbimar
 PUT http://localhost:3000/api/skelbimai/1
 Content-Type: application/json
 
 {
-  "firstname": "Vardenis",
-  "lastname": "Pavardenis",
-  "email": "vardenis@bit.lt"
+  "id": 1,
+  "title": "Mašina",
+  "category": "Mašinos",
+  "discription": "Nedaužta",
+  "price": 100,
+  "url": "https://aika.lt/39122-large_default/sportine-metaline-masina-modeliukas.jpg"
 }
 
 ### DELETE single student
@@ -43,8 +48,8 @@ POST http://localhost:3000/api/auth/register
 Content-Type: application/json
 
 {
-  "email": "vaidotass@gmail.com",
-  "password": "labaisunkusslaptazodis"
+  "email": "dominykas@gmail.com",
+  "password": "slapta"
 }
 
 
@@ -53,8 +58,8 @@ POST http://localhost:3000/api/auth/login
 Content-Type: application/json
 
 {
-  "email": "vaidotass@gmail.com",
-  "password": "labaisunkusslaptazodis"
+  "email": "dominykas@gmail.com",
+  "password": "slapta"
 }
 
 

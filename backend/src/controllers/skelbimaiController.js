@@ -27,15 +27,15 @@ module.exports = {
     res.json(items[0]);
   },
   create: async (req, res, next) => {
-    const { title, category, description, price, url } = req.body;
+    const { title, category, discription, price, url } = req.body;
 
     const sql =
-      'INSERT INTO skelbimas (title, category, description, price, url) VALUES (?,?,?,?,?)';
+      'INSERT INTO skelbimas (title, category, discription, price, url) VALUES (?,?,?,?,?)';
 
     const [responseObject, error] = await executeQuery(sql, [
       title,
       category,
-      description,
+      discription,
       price,
       url,
     ]);
@@ -59,12 +59,12 @@ module.exports = {
     const { title, category, description, price, url } = req.body;
 
     const sql =
-      'UPDATE skelbimas SET title=?, category=?, description=?, price=?, url=? WHERE id=?';
+      'UPDATE skelbimas SET title=?, category=?, discription=?, price=?, url=? WHERE id=?';
 
     const [responseObject, error] = await executeQuery(sql, [
       title,
       category,
-      description,
+      discription,
       price,
       url,
       id,
