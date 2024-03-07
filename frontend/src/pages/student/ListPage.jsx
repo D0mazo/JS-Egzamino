@@ -31,7 +31,7 @@ export default function ListingPage() {
       (listing) =>
         listing.title.toLowerCase().includes(filterValue.toLowerCase()) ||
         listing.category.toLowerCase().includes(filterValue.toLowerCase()) ||
-        listing.description.toLowerCase().includes(filterValue.toLowerCase())
+        listing.discription.toLowerCase().includes(filterValue.toLowerCase())
     );
   }, [listingData, filterValue]);
 
@@ -72,9 +72,9 @@ export default function ListingPage() {
                 <td className="border px-4 py-2">{listing.id}</td>
                 <td className="border px-4 py-2">{listing.title}</td>
                 <td className="border px-4 py-2">{listing.category}</td>
-                <td className="border px-4 py-2">{listing.description}</td>
+                <td className="border px-4 py-2">{listing.discription}</td>
                 <td className="border px-4 py-2">{listing.price}</td>
-                <td className="border px-4 py-2">{listing.url}</td>
+                <td className="border px-4 py-2"><img src={listing.url} style={{ maxWidth: '100px', maxHeight: '100px', display: 'block', margin: 'auto'}}></img></td>
                 <td className="border px-4 py-2">
                   {isUserLoggedIn && (
                     <>
