@@ -6,16 +6,16 @@ GET http://localhost:3000/
 GET http://localhost:3000/test-connection
 
 
-### Get all students
-GET http://localhost:3000/api/students
+### Get all skelbimai
+GET http://localhost:3000/api/skelbimai
 
 
 ### Get single student
-GET http://localhost:3000/api/students/5
+GET http://localhost:3000/api/skelbimai/5
 
 
 ### POST create student
-POST http://localhost:3000/api/students/
+POST http://localhost:3000/api/skelbimai/
 Content-Type: application/json
 Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXIiOnsiaWQiOjMsImVtYWlsIjoidmFpZG90YXNzQGdtYWlsLmNvbSIsInNjb3BlIjoiYWRtaW4ifSwiaWF0IjoxNzA2Njk0Nzk1LCJleHAiOjE3MDY2OTgzOTV9.BD2kjX7565ZsPEIclVXOPe0PxuVFhzFjIq0dJSJf21c
 
@@ -26,7 +26,7 @@ Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXIiOnsiaWQi
 }
 
 ### Update single student
-PUT http://localhost:3000/api/students/1
+PUT http://localhost:3000/api/skelbimai/1
 Content-Type: application/json
 
 {
@@ -36,7 +36,7 @@ Content-Type: application/json
 }
 
 ### DELETE single student
-DELETE http://localhost:3000/api/students/5
+DELETE http://localhost:3000/api/skelbimai/5
 
 ### POST Register User
 POST http://localhost:3000/api/auth/register
