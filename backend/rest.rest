@@ -1,18 +1,14 @@
 ### Check main page
 GET http://localhost:3000/
 
-
 ### Check DB connection
 GET http://localhost:3000/test-connection
-
 
 ### Get all skelbimai
 GET http://localhost:3000/api/skelbimai
 
-
 ### Get single skelbimai
 GET http://localhost:3000/api/skelbimai/1
-
 
 ### POST create skelbimai
 POST http://localhost:3000/api/skelbimai/
@@ -41,6 +37,9 @@ Content-Type: application/json
 
 ### DELETE single skelbima
 DELETE http://localhost:3000/api/skelbimai/3
+
+
+
 
 ### POST Register User
 POST http://localhost:3000/api/auth/register

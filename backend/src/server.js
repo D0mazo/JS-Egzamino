@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
 // Isidedame routus is router failu
 app.use('/api', skelbimaiRouter);
 app.use('/api', authRouter);
-app.use('/api', validateJWTToken, userRouter);
+app.use('/api', userRouter);
 
 app.get('/test-connection', async (req, res) => {
    const sql = "SELECT * FROM skelbimas";

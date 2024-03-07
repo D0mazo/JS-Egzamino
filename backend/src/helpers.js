@@ -7,10 +7,9 @@ async function executeQuery(sql, arguments = []) {
     let connection;
 
     try {
-        // Sukuriame prisijungima i DB
         connection = await mysql.createConnection(dbConfig);
 
-        // Pateiktos uzklausos vykdymas
+
         const [rows] = await connection.execute(sql, arguments);
 
         return [rows, null];

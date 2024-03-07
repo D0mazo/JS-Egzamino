@@ -68,7 +68,6 @@ module.exports = {
         if (error) {
             return next(error);
         }
-
         if (responseObject.affectedRows !== 1) {
             return next(new APIError('something went wrong', 400));
         }
