@@ -1,0 +1,64 @@
+### Check main page
+GET http://localhost:3000/
+
+
+### Check DB connection
+GET http://localhost:3000/test-connection
+
+
+### Get all students
+GET http://localhost:3000/api/students
+
+
+### Get single student
+GET http://localhost:3000/api/students/5
+
+
+### POST create student
+POST http://localhost:3000/api/students/
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXIiOnsiaWQiOjMsImVtYWlsIjoidmFpZG90YXNzQGdtYWlsLmNvbSIsInNjb3BlIjoiYWRtaW4ifSwiaWF0IjoxNzA2Njk0Nzk1LCJleHAiOjE3MDY2OTgzOTV9.BD2kjX7565ZsPEIclVXOPe0PxuVFhzFjIq0dJSJf21c
+
+{
+  "firstname": "Moe",
+  "lastname": "Deo",
+  "email": "moe@bit.lt"
+}
+
+### Update single student
+PUT http://localhost:3000/api/students/1
+Content-Type: application/json
+
+{
+  "firstname": "Vardenis",
+  "lastname": "Pavardenis",
+  "email": "vardenis@bit.lt"
+}
+
+### DELETE single student
+DELETE http://localhost:3000/api/students/5
+
+### POST Register User
+POST http://localhost:3000/api/auth/register
+Content-Type: application/json
+
+{
+  "email": "vaidotass@gmail.com",
+  "password": "labaisunkusslaptazodis"
+}
+
+
+### POST Login User
+POST http://localhost:3000/api/auth/login
+Content-Type: application/json
+
+{
+  "email": "vaidotass@gmail.com",
+  "password": "labaisunkusslaptazodis"
+}
+
+
+### GET User List
+GET http://localhost:3000/api/user
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjMsInVzZXIiOnsiaWQiOjMsImVtYWlsIjoidmFpZG90YXNzQGdtYWlsLmNvbSIsInNjb3BlIjoiYWRtaW4ifSwiaWF0IjoxNzA2Nzc3MDI5LCJleHAiOjE3MDY3ODA2Mjl9.7O2oHD_D04ZbTljT17xR_0PpOGGXRWbD7PP_5ZFv5ms
