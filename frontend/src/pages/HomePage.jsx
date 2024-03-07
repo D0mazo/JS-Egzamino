@@ -24,26 +24,31 @@ const HomePage = () => {
        
         
        
-  <div>
+ <div style={{ marginBottom: '10px' }}>
     <p>Vartotojas?</p>
+  </div>
+
+  <div>
     <Button variant="outline-success" href="/login">
-      Prisijunkite jei jau esate
+      Prisijunkite
     </Button>{' '}
     <Button variant="outline-warning" href="/register">
-      Registruokitės jei dar ne
+      Registruokitės
     </Button>{' '}
   </div>
- 
+
+  <div style={{ marginBottom: '10px' }}>
  <p>Jei Jau esate vartotojas</p>
+ </div>
  <Button variant="outline-success" href="/list-student">
       Skelbimai
     </Button>{' '}
     <Button variant="outline-warning" href="/create-student">
       Paskelbti Skelbimą
     </Button>{' '}
-        
+        </div>
       </div>
-    </div>
+    
   );
 };
 

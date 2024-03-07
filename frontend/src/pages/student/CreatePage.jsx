@@ -45,6 +45,9 @@ export default function StudentCreatePage() {
   }
 
   return (
+  
+
+    
     <div className='container mx-auto mt-5'>
       <h1 className='text-3xl my-5'>Pridėti skelbimą</h1>
       <p className='my-5'>Naujo skelbimo sukūrimo puslapis</p>
@@ -144,5 +147,6 @@ export default function StudentCreatePage() {
         </div>
       </form>
     </div>
+    
   );
 }
