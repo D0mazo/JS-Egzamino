@@ -14,6 +14,7 @@ import LoginPage from "./pages/auth/LoginPage.jsx";
 import UserListPage from "./pages/user/ListPage.jsx";
 import UserEditPage from "./pages/user/EditPage.jsx";
 import UserCreatePage from "./pages/user/CreatePage.jsx";
+
 import PrivateRoute from "./PrivateRoute/PrivateRoute.jsx";
 import AdminPrivateRoute from "./PrivateRoute/AdminPrivateRoute.jsx";
 
@@ -30,7 +31,7 @@ function App() {
                     </PrivateRoute>
                 } />
 
-                <Route path='/edit-student/:id' element={
+                <Route path='/edit-listing/:id' element={
                     <PrivateRoute>
                         <StudentEditPage />
                     </PrivateRoute>

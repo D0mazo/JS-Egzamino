@@ -117,22 +117,30 @@ export default function ListingPage() {
                   <img src={listing.url} style={{ maxWidth: '100px', maxHeight: '100px', display: 'block', margin: 'auto' }} alt="Listing" />
                 </td>
                 <td className="border px-4 py-2">
-                  {isUserLoggedIn && (
+                {isUserLoggedIn && (
+                    <button
+                      className=""
+                      onClick={() => handleStarClick(listing.id)}
+                    >
+                      ⭐
+                    </button>
+                )}
+                  {isUserAdmin && (
                     <>
                       <Link
-                        to={`/editlistingpage/${listing.id}`}
+                        to={`edit-listing/${listing.id}`}
                         className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
                       >
                         Edit
                       </Link>
-                      {isUserAdmin && (
+                      
                         <button
                           className="bg-red-500 hover:bg-red-400 text-white font-bold ml-2 py-2 px-4 rounded"
                           onClick={() => deleteListing(listing.id)}
                         >
                           Delete
                         </button>
-                      )}
+                      
                     </>
                   )}
                 </td>
